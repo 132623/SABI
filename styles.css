@@ -1,0 +1,248 @@
+/* Reset styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Body styling */
+body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #110202; 
+    background-image: url(Images/IMG-20220529-WA0002.png);
+    background-color: mediumaquamarine;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Header styling */
+header {
+     background: #4CAF50; 
+     color: #fff; 
+     padding: 1rem; 
+     text-align: center; 
+    }
+
+/* Navigation styling */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background: #333;
+    align-items: center;
+}
+
+nav ul li { margin: 0 1rem; }
+
+nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+
+/* Hero section */
+.hero {
+    background: url('Images/2.jpg') no-repeat center center/cover;
+    height: 50vh;
+    color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Main content styling */
+.content { padding: 2rem; max-width: 1200px; margin: auto; }
+.content h2 { text-align: center; color: #160a5a; }
+
+/* Team section styling */
+.team-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.team-member h4{
+    margin-bottom: 0.5rem;
+    color: #160a5a;
+    font-size: 100%;
+    font-weight: bolder;
+}
+.team-member h3 {
+    margin-bottom: 0.5rem;
+    color: #160a5a;
+}
+
+/* Blog & News section styling */
+.blog-post {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+.blog-post h3 {
+    color: #333;
+}
+.blog-post p {
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Contact form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 1rem;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #45a049;
+}
+
+/* Contact Information Styling */
+.contact-info {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: #160a5a;
+    margin-bottom: 0.5rem;
+}
+
+/* Social Media Links Styling */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #190b41;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #333;
+}
+
+/* Footer social links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.social-links a {
+    color: #3b0606;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.social-links a i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    nav ul { flex-direction: column; }
+    .team-member { flex-direction: column; }
+}
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Menu Toggle Button for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+}
+
+/* Hide nav menu initially on mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: #333;
+        padding: 1rem 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        border-radius: 5px;
+    }
+
+    /* Display nav when active */
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
