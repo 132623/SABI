@@ -50,6 +50,44 @@ nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
     animation: fadeIn 2s ease-in-out;
 }
 
+/* Mission and Vision Section Styling */
+.mission-vision {
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+}
+
+.mission, .vision {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    
+}
+
+.mission img, .vision img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .mission, .vision {
+        flex-direction: column;
+    }
+    
+    .mission img, .vision img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
 
 /* Keyframes for fade-in animation */
 @keyframes fadeIn {
